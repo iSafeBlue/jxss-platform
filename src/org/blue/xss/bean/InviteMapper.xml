@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="invite">
+
+	<select id="CheckInviteCode" parameterType="string" resultType="Invite">
+		select * from xss_invite where invitecode = #{code};
+	</select>
+	<update id="UpdateInviteUsed" parameterType="string" >
+		update xss_invite set isuse = '1' where invitecode = #{code};
+	</update>
+	<insert id="AddInviteCode">
+		insert into xss_invite values(
+		0,
+		MD5(RAND()*NOW()),
+		NOW(),
+		0
+		);
+	</insert>
+	<select id="ViewUsedInviteCode" resultType="Invite">
+		select * from xss_invite where isuse = 1;
+	</select>
+	
+	<select id="ViewUnusedInviteCode" resultType="Invite">
+		select * from xss_invite where isuse = 0;
+	</select>
+
+</mapper>

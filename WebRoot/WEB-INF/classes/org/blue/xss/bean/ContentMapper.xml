@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="content">
+
+	<select id="viewContentOfProjectList"  resultType="Content" parameterType="Project">
+		select 
+		cid,location,domain,content,date
+		from xss_content 
+		where pid = #{pid} 
+		limit #{page},20;
+	</select>
+	<delete id="deleteContentsOfProject" parameterType="Content">
+		delete from xss_content where pid = #{pid} and cid = #{cid};
+	</delete>
+	<select id="countContentOfProject" parameterType="Project" resultType="int">
+		select count(1) from xss_content where pid = #{pid}; 
+	</select>
+
+	<insert id="AddContentOfProject" parameterType="Content">
+		insert into xss_content values(
+			0,#{pid},#{location},#{domain},#{content},now()
+		);
+	</insert>
+
+</mapper>

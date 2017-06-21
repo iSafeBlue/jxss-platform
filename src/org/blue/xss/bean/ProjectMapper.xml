@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project">
+	<select id="ViewProjectList" resultType="Project" parameterType="int">
+		select * from xss_project where uid = #{uid};
+	</select>
+	
+	<select id="CheckProjectAndUser" resultType="Project" parameterType="Project">
+		select * from xss_project where uid = #{uid}  and  pid = #{pid};
+	</select>
+	
+	<insert id="AddProject" parameterType="Project">
+		insert into xss_project(`pid`,`pname`,`pdescription`,`createdate`,`uid`) 
+		values(0,#{pname},#{pdescription},now(),#{uid});
+	</insert>
+	
+	<delete id="DeleteProject" parameterType="Project">
+		delete from xss_project where uid = #{uid} and pid = #{pid};
+	</delete>
+</mapper>

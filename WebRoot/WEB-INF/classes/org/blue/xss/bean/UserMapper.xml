@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	
+	<select id="CheckUsernameAndEmail" resultType="User" parameterType="User">
+		select * from xss_user where username = #{username} or email = #{email};
+	</select>
+	<select id="LoginCheck" resultType="User" parameterType="User">
+		select * from xss_user where username = #{username} and password = #{password}
+	</select>
+	<insert id="RegisterCheck" parameterType="User">
+		insert into xss_user values(
+			0,
+			#{email},
+			#{username},
+			#{password}
+		);
+	</insert>
+	
+	
+</mapper>

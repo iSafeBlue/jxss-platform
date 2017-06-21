@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 别名 -->
+	<typeAliases>
+		<typeAlias type="org.blue.xss.bean.Project" alias="Project"/>
+		<typeAlias type="org.blue.xss.bean.User" alias="User"/>
+		<typeAlias type="org.blue.xss.bean.Invite" alias="Invite"/>
+		<typeAlias type="org.blue.xss.bean.Content" alias="Content"/>
+		<typeAlias type="org.blue.xss.bean.Admin" alias="Admin"/>
+	</typeAliases>
+	<!-- 环境：包括数据源，事务管理，不过在ssm框架里面，是交给spring去管理 -->
+	<!-- mapper的映射文件：1.如果mybatis的映射文件和实体类放在一起，要写mpper标签，
+		 2.如果和dao层在一起，不需要写mapper标签，但是这个映射文件要和dao的名称要保持一致 -->
+		 <mappers>
+		 	<mapper resource="org/blue/xss/bean/ProjectMapper.xml"/>
+		 	<mapper resource="org/blue/xss/bean/UserMapper.xml"/>
+		 	<mapper resource="org/blue/xss/bean/InviteMapper.xml"/>
+		 	<mapper resource="org/blue/xss/bean/ContentMapper.xml"/>
+		 	<mapper resource="org/blue/xss/bean/AdminMapper.xml"/>
+		 </mappers>
+</configuration>

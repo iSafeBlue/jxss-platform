@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/view/adminlogin.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/content.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/content_body.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/header.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/invite.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/invite_body.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/login.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/menu.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/project.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/project_body.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/projectadd_body.jsp=UTF-8
+encoding//WebRoot/WEB-INF/view/register.jsp=UTF-8
+encoding//WebRoot/assets/js/echarts.min.js=UTF-8
+encoding//src/org/blue/xss/controller/ApiController.java=UTF-8

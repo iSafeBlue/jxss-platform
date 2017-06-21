@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="XSSPlatform_v2"
+  id="myeclipse.1497657263374"
+  context-root="/XSSPlatform_v1"
+  j2ee-spec="5.0"
+  archive="XSSPlatform_v2.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
