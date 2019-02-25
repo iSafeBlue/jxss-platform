@@ -16,7 +16,3 @@ http://host/Admin/Login.x<br/>
 为后台登陆地址，默认账号密码：admin 123456，位于`xss_admin`表。<br/>
 至此搭建成功。<br/>
 
-欢迎交流
-------
-Email:blue@ixsec.org<br/>
-微信:Xsec_Te4m
